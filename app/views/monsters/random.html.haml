@@ -1,0 +1,17 @@
+#Monsters
+	%h1 You have created:
+	-# = @randA
+	%br
+	%h1= @adjective
+	%h2= @noun
+
+	%hr
+
+
+	-# %h3 There are
+	-# =@num_adj
+	-# adjectives and
+	-# =@num_noun
+	-# nouns in the database!
+
+	= button_to "Refresh", random_path, :method => :get

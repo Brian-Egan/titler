@@ -1,0 +1,29 @@
+<%= form_for(@description) do |f| %>
+  <% if @description.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@description.errors.count, "error") %> prohibited this description from being saved:</h2>
+
+      <ul>
+      <% @description.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :word %><br>
+    <%= f.text_field :word %>
+  </div>
+  <div class="field">
+  <%= f.select(:type, options_for_select([['Noun', :noun], ['Adjective', :adjective]])) %>
+<!--   <#%= f.select_tag :type, "<option>Noun</option><option>Adjective</option>".html_safe %> -->
+  </div>
+  <!-- <div class="field">
+    <#%= f.label :type %><br>
+    <#%= f.text_field :type %>
+  </div> -->
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

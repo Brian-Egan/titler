@@ -1,0 +1,17 @@
+
+
+<p>You've added:</p>
+<p>
+  <strong>Word:</strong>
+  <%= @adjective.word %>
+</p>
+
+
+
+
+<%= link_to 'Create More!', new_adjective_path, {'data-role' => 'button', 'data-inline' => 'true', 'data-theme' => 'a'} %>
+
+<br>
+
+<%= link_to 'Edit', edit_adjective_path(@adjective) %> |
+<%= link_to 'Back', adjectives_path %>

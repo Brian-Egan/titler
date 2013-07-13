@@ -1,0 +1,17 @@
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Word:</strong>
+  <%= @noun.word %>
+</p>
+
+
+
+<%= link_to 'Create More!', new_noun_path, :'data-type' => 'button' %>
+
+<br>
+
+
+<%= link_to 'Edit', edit_noun_path(@noun) %> |
+<%= link_to 'Back', nouns_path %>
