@@ -6,13 +6,13 @@ Titler::Application.routes.draw do
 
   resources :monsters
 
-  resources :descriptions
+  # resources :descriptions
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'nouns#new'
+  root 'monsters#random'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
