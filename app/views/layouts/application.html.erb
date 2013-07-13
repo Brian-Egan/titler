@@ -13,6 +13,11 @@
 
 <%= yield %>
 
+<hr>
+<%= link_to "Want to add more nouns?", new_noun_path, :'data-role' => 'button' %>
+<br>
+<%= link_to "...or new adjectvies?", new_adjective_path, :'data-role' => 'button' %>
+
 </div>
 
 </body>
