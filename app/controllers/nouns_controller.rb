@@ -15,6 +15,7 @@ class NounsController < ApplicationController
   # GET /nouns/new
   def new
     @noun = Noun.new
+    @nouns = Noun.all
   end
 
   # GET /nouns/1/edit

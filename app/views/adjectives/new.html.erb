@@ -2,4 +2,13 @@
 
 <%= render 'form' %>
 
+<hr>
+
+<p> Current adjectives </p>
+<ul>
+<% @adjectives.each do |a|  %>
+<li> <%= a.word %> </li>
+<% end %>
+<br>
+
 <%= link_to 'Back', adjectives_path %>

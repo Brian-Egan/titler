@@ -15,6 +15,7 @@ class AdjectivesController < ApplicationController
   # GET /adjectives/new
   def new
     @adjective = Adjective.new
+    @adjectives = Adjective.all
   end
 
   # GET /adjectives/1/edit

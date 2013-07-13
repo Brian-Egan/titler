@@ -2,4 +2,11 @@
 
 <%= render 'form' %>
 
+<p> Current nouns </p>
+<ul>
+<% @nouns.each do |n|  %>
+<li> <%= n.word %> </li>
+<% end %>
+<br>
+
 <%= link_to 'Back', nouns_path %>
