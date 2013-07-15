@@ -52,6 +52,8 @@ class MonstersController < ApplicationController
     @randN = rand(@num_noun)
     @randN = @randN + 1 unless @randN > 0
     @noun = Noun.find(@randN).word
+
+    @mymonster = @adjective + " " + @noun
  
   end
 
