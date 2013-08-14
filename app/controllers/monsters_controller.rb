@@ -116,8 +116,8 @@ class MonstersController < ApplicationController
   end
 
   def likeMon
-    monster_id = params[:id]
-    @monster = Monster.find(monster_id)
+    @monster_id = params[:id]
+    @monster = Monster.find(@monster_id)
     @monster.likes_count += 1
     @monster.save
     @sortOrder = "sortLikes"
