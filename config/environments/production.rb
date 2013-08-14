@@ -79,5 +79,6 @@ Titler::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # replace this with your tracker code
-GA.tracker = "UA-43182175-1"
+  GA.tracker = "UA-43182175-1"
+  
 end
