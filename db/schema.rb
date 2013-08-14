@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130814185127) do
+ActiveRecord::Schema.define(version: 20130814195950) do
 
   create_table "adjectives", force: true do |t|
     t.string   "word"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20130814185127) do
     t.datetime "updated_at"
     t.string   "adjective"
     t.string   "noun"
+    t.integer  "like",       default: 0
   end
 
   create_table "nouns", force: true do |t|

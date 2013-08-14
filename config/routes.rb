@@ -4,7 +4,10 @@ Titler::Application.routes.draw do
 
   resources :nouns
 
-  resources :monsters
+  resources :monsters do
+    get 'like', :on => :member
+  end
+  
 
   # resources :descriptions
 

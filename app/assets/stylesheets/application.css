@@ -10,7 +10,7 @@
  *
  *= require_self
  *= require twitter/bootstrap
- *= require jqm-font-awesome
+ *= require font-awesome
  *= require_tree .
  */
 
@@ -92,4 +92,22 @@ hr {
 
 .createNewBtns span a {
 	margin-top: 4px !important;
+}
+
+.likeBtn {
+	color: #5b94de;
+/*	background: grey;*/
+	line-height: 28px !important;
+	margin-top: -11px !important;
+	width: 75px !important;
+	vertical-align: middle !important;
+
+}
+
+.likeBtn i {
+	margin-top: 11%;
+}
+
+.likeBtn:hover {
+	background: #4687da;
 }

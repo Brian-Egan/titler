@@ -101,6 +101,16 @@ class MonstersController < ApplicationController
     end
   end
 
+  def like
+    monster_id = params[:id]
+    @monster = Monster.find(monster_id)
+    @monster.like += 1
+    @monster.save
+
+    redirect_to monsters_path
+  end
+  
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
