@@ -1,14 +1,14 @@
-#Monsters
-	%p You have created:
-	-# = @randA
-	%h1= @adjective
-	%h2= @noun
+#Monsters.jumbotron
+	%h4 You have created:
+	#MyMonster
+		%h1#myAdj= @adjective
+		%h2#myNoun= @noun
 
-	%hr
 
-	%h2= @mymonster
 
-	%hr
+	-# %h2= @mymonster
+
+
 
 
 	-# %h3 There are
@@ -17,4 +17,4 @@
 	-# =@num_noun
 	-# nouns in the database!
 
-	= button_to "Refresh", random_path, :method => :get
+= button_to "Refresh", random_path, :method => :get, :class => 'refreshMonster btn btn-large btn-primary', :remote => "true"

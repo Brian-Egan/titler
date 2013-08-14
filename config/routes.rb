@@ -68,5 +68,7 @@ Titler::Application.routes.draw do
   match '/newnoun' => 'nouns#new', :via => :get
   match '/newadjective' => 'adjectives#new', :via => :get
 
+  match '/testBS1' => 'monsters#test', :via => :get
+
 
 end

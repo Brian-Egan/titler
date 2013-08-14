@@ -5,15 +5,17 @@
   	<!-- <meta name="viewport" content="width=320.1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" /> -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+   
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <div data-role="page">
+<% if notice || alert %>
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
+<% end %>
 
 <%= yield %>
 
@@ -30,24 +32,3 @@
 </body>
 </html>
 
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Bootstrap 101 Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-  </head>
-  <body>
-    <h1>Hello, world!</h1>
-
-    <!-- JavaScript plugins (requires jQuery) -->
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Optionally enable responsive features in IE8 -->
-    <script src="js/respond.js"></script>
-  </body>
-</html>

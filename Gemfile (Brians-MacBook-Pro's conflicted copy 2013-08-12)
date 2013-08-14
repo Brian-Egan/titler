@@ -51,7 +51,11 @@ gem 'haml'
 gem 'heroku'
 
 gem 'jquery-rails'  # If using Bootstrap's JS plugins.
-gem 'less-rails-bootstrap', '~> 3.0.0.wip', github: 'sinfin/less-rails-bootstrap-3'
+# gem 'less-rails-bootstrap', '~> 3.0.0.wip', github: 'sinfin/less-rails-bootstrap-3'
+
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :github => 'anjlab/bootstrap-rails',
+                              :branch => '3.0.0'
 
 # gem 'devise'
 

@@ -1,0 +1,36 @@
+
+    <div class="container">
+
+
+<div class="list-group">
+	<a href="#" class="list-group-item active">
+    <h3 class="list-group-item-heading">List group item heading <span class="badge pull-right"><%= @monStars.count %></span></h3>
+    <p class="list-group-item-text">Showing <%= @monStars.count %> items.</p>
+  </a>
+
+	<a href="#" class="list-group-item" >
+		<%= image_tag "http://lorempixel.com/50/50/abstract/", :class => 'media-object pull-left' %>
+	    <div class="media-body">
+	    	<h4 class="list-group-item-heading">First Item</h4>
+	   	 	<p class="list-group-item-text">Ahoy!</p>
+	  	</div>
+  	</a>
+
+	<!-- This looks the best by far! -->
+	<% @monStars.each do |m| %>
+	 	<%= link_to '#', :class => 'list-group-item' do %>
+	 	<%= image_tag "http://lorempixel.com/50/50/sports/", :class => 'media-object pull-left' %>
+	 	<div class="media-body">
+		 	<h4 class="list-group-item-heading">Number <%= m %></h4>
+		 	<p class="list-group-item-text">This is item number <%= m %> in our list</p>
+	 	</div>
+		<% end %>
+	<% end %>
+</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/jquery.js"></script>
+    <script src="../assets/bootstrap.min.js"></script>
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Titler</title>
+  	<!-- <meta name="viewport" content="width=320.1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" /> -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
+
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<header>
+	<%= render :partial => 'shared/navbarDD' %>
+	</header>
+	<body>
+
+<% if notice || alert %>
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+       <% end %>
+
+<%= yield %>
+
+</div>
+<hr>
+<!-- <#%= link_to "I want to create a new monster, damnit!", random_path %>
+<hr>
+<#%= link_to "Want to add more nouns?", new_noun_path, :'data-role' => 'button' %>
+<br>
+<#%= link_to "...or new adjectives?", new_adjective_path, :'data-role' => 'button' %>
+
+
+ -->
+
+    <!-- JavaScript plugins (requires jQuery) -->
+   <!--  <script src="http://code.jquery.com/jquery.js"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="assets/bootstrap.min.js"></script>
+
+    <!-- Optionally enable responsive features in IE8 -->
+    <!--  <script src="assets/respond.js"></script> -->
+
+</body>
+</html>
+
+
+

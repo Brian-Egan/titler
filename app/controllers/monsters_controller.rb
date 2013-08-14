@@ -82,6 +82,22 @@ class MonstersController < ApplicationController
     end
   end
 
+  def test
+    @numBooks = 15
+    @i = 1
+    @monStars = []
+    while @i < @numBooks + 1
+      @monStars << @i
+      @i += 1
+    end
+
+    respond_to do |format|
+      format.html {  }
+      format.json {}
+    end
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_monster
