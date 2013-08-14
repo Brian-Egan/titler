@@ -6,3 +6,19 @@
 $(document).delegate ".refreshMonster", "click", ->
   $.get('/random', "allData", null, "script")
   return false
+
+
+$(document).delegate ".sortDate", "click", ->
+	console.log "hello"
+	sStyle = {sort: "sortDate"}
+	console.log sStyle
+	$.get('/monsters', sStyle, null, "script")
+	return false
+
+$(document).delegate ".sortLikes", "click", ->
+	console.log "hello"
+	sStyle = {sort: "sortLikes"}
+	console.log sStyle
+	$.get('/monsters', sStyle, null, "script")
+	return false
+

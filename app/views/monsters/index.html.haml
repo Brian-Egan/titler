@@ -1,20 +1,12 @@
-%h1 Our Creations
+%h1 Our Creations #{@sortOrder}
+= @sortOrder
+%div.btn-group.btn-group-sm.sortBtns
+	%button{:type => 'button', :class => 'btn btn-default sortDate'}
+		Sort by Date
+	%button{:type => 'button', :class => 'btn btn-default sortLikes'}
+		Sort by Popularity
 
-%ul.list-group
-	- @monsters.each do |m|
-		%li.list-group-item
-			= m.name
-			-# = link_to m.like, like_monster_path(m), class: "btn btn-small pull-right" do
-			= link_to like_monster_path(:id => m), class: "btn btn-small pull-right likeBtn" do 
-				%i.icon-thumbs-up-alt.pull-right
-				- if m.like == 1
-					= "#{m.like} Like"
-				- else
-					= "#{m.like} Likes"
-				
-				-# = link_to m.like, like_monster_path(m), class: "btn btn-small pull-right" do
-			-# %span.badge
-			-# 	= m.like
+= render partial: 'shared/monsterList'
 			
 
 

@@ -111,3 +111,7 @@ hr {
 .likeBtn:hover {
 	background: #4687da;
 }
+
+.sortBtns {
+	margin: auto auto 5px auto;
+}

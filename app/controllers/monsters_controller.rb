@@ -4,7 +4,21 @@ class MonstersController < ApplicationController
   # GET /monsters
   # GET /monsters.json
   def index
-    @monsters = Monster.all
+    # @monsters = Monster.all
+
+    @sortOrder = params[:sort]
+    if @sortOrder == "sortDate"
+      @monsters = Monster.all(:order => "created_at DESC")
+    elsif @sortOrder == "sortLikes"
+      @monsters = Monster.all(:order => "like DESC")
+    else
+      @monsters = Monster.all
+    end
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
 
   end
 
@@ -109,7 +123,7 @@ class MonstersController < ApplicationController
 
     redirect_to monsters_path
   end
-  
+
 
 
   private
