@@ -10,7 +10,7 @@ class MonstersController < ApplicationController
     if @sortOrder == "sortDate"
       @monsters = Monster.all(:order => "created_at DESC")
     elsif @sortOrder == "sortLikes"
-      @monsters = Monster.all(:order => "like DESC")
+      @monsters = Monster.all(:order => "likes_count DESC")
     else
       @monsters = Monster.all
     end
@@ -115,11 +115,12 @@ class MonstersController < ApplicationController
     end
   end
 
-  def like
+  def likeMon
     monster_id = params[:id]
     @monster = Monster.find(monster_id)
-    @monster.like += 1
+    @monster.likes_count += 1
     @monster.save
+    @sortOrder = "sortLikes"
 
     redirect_to monsters_path
   end
