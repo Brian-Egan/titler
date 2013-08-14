@@ -56,8 +56,8 @@ class MonstersController < ApplicationController
 
     @mymonster = @adjective + " " + @noun
 
-    @mon = Monster.new(:name => @mymonster, :noun => @noun, :adjective => @adjective)
-    # @monster.save
+    @monster = Monster.new(:name => @mymonster, :noun => @noun, :adjective => @adjective)
+    @monster.save
  
   end
 
