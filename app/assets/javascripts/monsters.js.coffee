@@ -4,8 +4,10 @@
 
 
 $(document).delegate ".refreshMonster", "click", ->
-  mPanel = $("#MyMonster")
-  mPanel.fadeOut "fast"
+  # mPanel = $("#MyMonster")
+  # mPanel.fadeOut "fast"
+  $('#myAdj').fadeOut('slow')
+  $('#myNoun').fadeOut('slow')
   $.get('/random', "allData", null, "script")
   return false
   
