@@ -8,7 +8,6 @@ Titler::Application.routes.draw do
     get 'likeMon', :on => :member
   end
 
-  gem 'google-analytics-rails'
 
   # resources :descriptions
 

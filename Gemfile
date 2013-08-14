@@ -52,7 +52,7 @@ gem 'haml'
 
 gem 'heroku'
 
-
+gem 'google-analytics-rails'
 
 
 
