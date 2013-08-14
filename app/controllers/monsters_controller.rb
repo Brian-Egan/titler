@@ -11,6 +11,7 @@ class MonstersController < ApplicationController
   # GET /monsters/1
   # GET /monsters/1.json
   def show
+    
   end
 
   # GET /monsters/new
@@ -54,6 +55,9 @@ class MonstersController < ApplicationController
     @noun = Noun.find(@randN).word
 
     @mymonster = @adjective + " " + @noun
+
+    @monster = Monster.new(:name => @mymonster, :noun => @noun, :adjective => @adjective)
+    @monster.save
  
   end
 

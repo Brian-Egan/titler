@@ -15,7 +15,7 @@ class AdjectivesController < ApplicationController
   # GET /adjectives/new
   def new
     @adjective = Adjective.new
-    @adjectives = Adjective.all
+    @adjectives = Adjective.all(:order => "created_at DESC")
   end
 
   # GET /adjectives/1/edit
@@ -29,8 +29,9 @@ class AdjectivesController < ApplicationController
 
     respond_to do |format|
       if @adjective.save
-        format.html { redirect_to @adjective, notice: 'Adjective was successfully created.' }
+        format.html { redirect_to new_adjective_path, notice: 'Adjective was successfully created.' }
         format.json { render action: 'show', status: :created, location: @adjective }
+        format.js  { }
       else
         format.html { render action: 'new' }
         format.json { render json: @adjective.errors, status: :unprocessable_entity }

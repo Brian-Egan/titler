@@ -15,7 +15,8 @@ class NounsController < ApplicationController
   # GET /nouns/new
   def new
     @noun = Noun.new
-    @nouns = Noun.all
+    @nouns = Noun.all(:order => "created_at DESC")
+    
   end
 
   # GET /nouns/1/edit
@@ -26,11 +27,14 @@ class NounsController < ApplicationController
   # POST /nouns.json
   def create
     @noun = Noun.new(noun_params)
+    @nouns = Noun.all(:order => "created_at DESC")
 
     respond_to do |format|
       if @noun.save
-        format.html { redirect_to @noun, notice: 'Noun was successfully created.' }
+        # format.html { redirect_to @noun, notice: 'Noun was successfully created.' }
+        format.html { redirect_to new_noun_path , notice: 'Noun was successfully created.' }
         format.json { render action: 'show', status: :created, location: @noun }
+        format.js { }
       else
         format.html { render action: 'new' }
         format.json { render json: @noun.errors, status: :unprocessable_entity }

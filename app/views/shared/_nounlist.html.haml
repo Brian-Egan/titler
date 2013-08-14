@@ -1,0 +1,10 @@
+%ul.list-group.wordsList
+  - @i = 1
+  - @nouns.each do |n|
+    - if @i < 2
+      %li{:class => "list-group-item text-success #{@i}"}
+        = n.word
+      - @i += 1
+    - else
+      %li.list-group-item
+        = n.word

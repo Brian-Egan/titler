@@ -1,0 +1,5 @@
+$('#noun_word').val(null);
+$("<li class='list-group-item text-success' style='display:block;'><%= j @noun.word %></li>").fadeIn('slow').prependTo('.wordsList');
+$(".wordsList li:nth-child(2)").removeClass('text-success');
+
+

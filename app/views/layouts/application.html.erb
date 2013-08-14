@@ -10,25 +10,37 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
+
+
 <body>
-<div data-role="page">
-<% if notice || alert %>
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-<% end %>
+  <div data-role="page">
+    <% if notice || alert %>
+    	<% if notice %>
+           <p class="notice alert alert-success"><%= notice %></p>
+       <% else %>
+           <p class="alert alert-danger"><%= alert %></p>
+       <% end %>
+    <% end %>
+    <%= yield %>
+  </div>
+  <hr>
 
-<%= yield %>
+  <div class="row createNewBtns">
+    <span class="col-md-6">
+      <%= link_to "Add New Nouns", new_noun_path, class: "btn btn-success btn-large" %>
+    </span>
+    <span class="col-md-6">
+      <%= link_to "Add New Adjectives", new_adjective_path, class: "btn btn-success btn-large" %>
+    </span>
+    <span class="col-md-8">
+      <%= link_to "Show Me All the Monsters", monsters_path, class: "btn btn-primary btn-large" %>
+    </span>
+  </div>
 
-</div>
-<hr>
-<%= link_to "I want to create a new monster, damnit!", random_path %>
-<hr>
-<%= link_to "Want to add more nouns?", new_noun_path, :'data-role' => 'button' %>
-<br>
-<%= link_to "...or new adjectives?", new_adjective_path, :'data-role' => 'button' %>
 
-</div>
+
 
 </body>
+
 </html>
 

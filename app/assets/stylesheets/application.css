@@ -17,7 +17,7 @@
 body {
 	width: auto;
 /*	padding-top: 10px; */
-	padding: 0% 2% 2% 2%;
+	padding: 1% 2% 2% 2%;
 }
 
 /*.navbar {
@@ -51,4 +51,22 @@ body {
 
 .navbar-toggle {
 	margin-top: 0px !important;
+}
+
+
+.panel {
+	margin-top: 15px;
+}
+
+.word-panel {
+	border-radius: 0px !important;
+}
+
+.addWordBtn {
+/*	margin: 3px auto auto 2.5%;
+	min-width: 200px;*/
+}
+
+.createNewBtns {
+	margin-left: 1px !important;
 }

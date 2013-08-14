@@ -1,9 +1,10 @@
-%h1 Listing monsters
+%h1 Our Creations
 
-=link_to 'Create a new freakish monster', new_monster_path
+%ul.list-group
+	- @monsters.each do |m|
+		%li.list-group-item
+			= m.name
 
-%br
-%br
+=link_to 'Create a new freakish monster', random_path, class: "btn btn-large btn-primary"
 
-= link_to 'New Monster', new_monster_path
 <!-- = link_to 'Show me all the monsters',  -->

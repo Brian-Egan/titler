@@ -1,5 +1,29 @@
-$('#myAdj').html("<%= j @adjective  %>");
-$('#myNoun').html("<%= j @noun  %>");
-$('#myAdj').fadeIn('slow');
-$('#myNoun').fadeIn('slow');
-console.log("<%= @noun %>");
+var myAdj = $('#myAdj'),
+	myNoun = $('#myNoun'),
+	monDiv = $('#MyMonster'),
+	newNoun = "<%= j @adjective  %>",
+	newAdj = "<%= j @noun  %>";
+
+myAdj.fadeOut('fast');
+
+	myNoun.fadeOut('fast', function() {
+	myAdj.text("<%= j @adjective %>");
+	myNoun.text("<%= j @noun %>");
+	myAdj.fadeIn('400');
+	myNoun.fadeIn('600');
+
+});
+
+
+
+
+// myAdj.fadeIn('slow');
+// $("<#%= j @adjective  %>").fadeIn('slow').prependTo('#myAdj');
+// $("<#%= j @noun  %>").fadeIn('slow').html('#myNoun');
+console.log("<%= j @adjective %>" + " " + "<%= j @noun  %>");
+
+// myAdj.html("<%= j @adjective  %>");
+// myNoun.html("<%= j @noun  %>");
+// myAdj.fadeIn('slow');
+// myNoun.fadeIn('slow');
+// console.log("<%= @noun %>");

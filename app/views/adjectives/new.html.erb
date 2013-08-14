@@ -1,14 +1,14 @@
-<h1>New adjective</h1>
+<h1>Add an Adjective</h1>
 
 <%= render 'form' %>
 
-<hr>
-
-<p> Current adjectives </p>
-<ul>
-<% @adjectives.each do |a|  %>
-<li> <%= a.word %> </li>
-<% end %>
-<br>
+<div class="panel panel-info displayWordsPanel">
+  <div class="panel-heading word-panel">
+    <h3 class="panel-title">Current Adjectives</h3>
+  </div>
+  <div class="panel-body">
+  	<%= render 'shared/adjectivelist' %>
+  </div>
+</div>
 
 <%= link_to 'Back', adjectives_path %>
