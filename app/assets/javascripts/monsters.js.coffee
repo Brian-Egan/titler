@@ -46,5 +46,17 @@ $('.likeBtn').click ->
 	return false;
 
 
+# $('.mPageNum').click ->
+# 	console.log("page num clicked");
+	# return false
+
+
+$(document).delegate ".mPageNum", "click", ->
+	console.log("delegate worked!");
+	console.log($(this).parent());
+	myLi = $(this).parent();
+	myLi.addClass("active");
+	# $(this).parent().addClass('active');
+
 
 
