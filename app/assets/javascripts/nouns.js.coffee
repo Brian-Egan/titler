@@ -24,3 +24,6 @@ submitNounForm = (form) ->
 	console.log "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-="
 	$.post $("#new_noun").attr("action"), wordForm, null, "script"
 	return false
+
+$('.nounDelete').click ->
+	

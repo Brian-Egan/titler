@@ -61,8 +61,9 @@ class NounsController < ApplicationController
   def destroy
     @noun.destroy
     respond_to do |format|
-      format.html { redirect_to nouns_url }
+      format.html { redirect_to new_noun_path }
       format.json { head :no_content }
+      format.js
     end
   end
 

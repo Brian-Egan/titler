@@ -1,10 +1,5 @@
 %ul.list-group.wordsList
-  - @i = 1
-  - @nouns.each do |n|
-    - if @i < 2
-      %li{:class => "list-group-item text-success #{@i}"}
-        = n.word
-      - @i += 1
-    - else
-      %li.list-group-item
-        = n.word
+	- @nouns.each do |n|
+		%li.list-group-item
+			= n.word
+			= link_to 'x', noun_path(n), method: :delete, class: "pull-right nounDelete", data: { confirm: 'Are you sure?' } 

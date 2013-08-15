@@ -2,3 +2,4 @@
 	- @adjectives.each do |a|
 		%li.list-group-item
 			= a.word
+			= link_to 'x', adjective_path(a), method: :delete, class: "pull-right nounDelete", data: { confirm: 'Are you sure?' } 

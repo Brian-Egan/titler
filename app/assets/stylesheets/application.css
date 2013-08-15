@@ -116,7 +116,8 @@ hr {
 	margin: auto auto 5px auto;
 }
 
-i {
+i.icon-thumbs-up-alt {
 	margin-right: -5px !important;
 	margin-top: 16% !important;
 }
+

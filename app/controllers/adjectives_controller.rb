@@ -58,7 +58,7 @@ class AdjectivesController < ApplicationController
   def destroy
     @adjective.destroy
     respond_to do |format|
-      format.html { redirect_to adjectives_url }
+      format.html { redirect_to new_adjective_path }
       format.json { head :no_content }
     end
   end
