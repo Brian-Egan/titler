@@ -9,12 +9,15 @@
 %span.badge.monBadge
 	= @monsters.count
 
-= @pageN
+-# %div{class: "text-primary pull-left"}
+-# 	= "Page #{@pageN}"
+
+
 
 %ul.pagination.pull-right.pageNums
 	%li
 		-# %a{:href => "#"} &laquo;
-		= link_to '&laquo;', monsters_path(:page => (@pageN - 1))
+		= link_to "<<", monsters_path(:page => (@pageN - 2))
 	%li
 		-# %a{:href => "#"} 1
 		= link_to "#{@pageN -1}", monsters_path(:page => (@pageN - 1))
@@ -25,11 +28,11 @@
 		-# %a{:href => "#"} 3
 		= link_to "#{@pageN + 1}", monsters_path(:page => (@pageN + 1))
 	%li
-		%a{:href => "#"} 4
+		= link_to "#{@pageN + 2}", monsters_path(:page => (@pageN + 2))
 	%li
-		%a{:href => "#"} 5
+		= link_to "#{@pageN + 3}", monsters_path(:page => (@pageN + 3))
 	%li
-		%a{:href => "#"} &raquo;
+		= link_to ">>", monsters_path(:page => @pageN)
 
 %hr
 
