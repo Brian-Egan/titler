@@ -7,13 +7,13 @@ class MonstersController < ApplicationController
     # @monsters = Monster.all
 
     @sortOrder = params[:sort]
-    # if @sortOrder == "sortDate"
-    #   @monsters = Monster.all(:order => "created_at DESC")
-    # elsif @sortOrder == "sortLikes"
-    #   @monsters = Monster.all(:order => "likes_count DESC")
-    # else
-    #   @monsters = Monster.all(:order => "likes_count DESC")
-    # end
+    if @sortOrder == "sortDate"
+      @monsters = Monster.all(:order => "created_at DESC")
+    elsif @sortOrder == "sortLikes"
+      @monsters = Monster.all(:order => "likes_count DESC")
+    else
+      @monsters = Monster.all(:order => "likes_count DESC")
+    end
 
     # @monsters = Monster.paginate(:page => 1, :order => 'likes_count DESC')
     if params[:page]
@@ -28,7 +28,7 @@ class MonstersController < ApplicationController
 
           
 
-    @monsters = Monster.page(params[:page]).order("likes_count DESC")
+    # @monsters = Monster.page(params[:page]).order("likes_count DESC")
 
     @pageN += 1
 

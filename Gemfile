@@ -62,7 +62,7 @@ gem 'jquery-rails'  # If using Bootstrap's JS plugins.
 gem 'less-rails-bootstrap', '~> 3.0.0.wip', github: 'sinfin/less-rails-bootstrap-3'
 
 
-gem 'will_paginate-bootstrap'
+# gem 'will_paginate-bootstrap'
 
 # gem 'devise'
 
