@@ -11,6 +11,7 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
    <%= analytics_init if Rails.env.production? %>
+   <link rel="shortcut icon" href="favicon16.ico"/>
 </head>
 
 
@@ -32,7 +33,7 @@
       <%= link_to "Add New Nouns", new_noun_path, class: "btn btn-success btn-large" %>
     </span>
     <span class="col-md-6">
-      <%= link_to "Add New Adjectives", new_adjective_path, class: "btn btn-success btn-large" %>
+      <%= link_to "Add New Descriptor", new_adjective_path, class: "btn btn-success btn-large" %>
     </span>
     <span class="col-md-8">
       <%= link_to "Show Me All the Monsters", monsters_path, class: "btn btn-primary btn-large" %>

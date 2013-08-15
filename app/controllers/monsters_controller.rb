@@ -12,7 +12,7 @@ class MonstersController < ApplicationController
     elsif @sortOrder == "sortLikes"
       @monsters = Monster.all(:order => "likes_count DESC")
     else
-      @monsters = Monster.all
+      @monsters = Monster.all(:order => "likes_count DESC")
     end
 
     respond_to do |format|

@@ -69,7 +69,7 @@ Titler::Application.routes.draw do
   match '/random' => 'monsters#random', :via => :get
 
   match '/newnoun' => 'nouns#new', :via => :get
-  match '/newadjective' => 'adjectives#new', :via => :get
+  match '/newdescriptor' => 'adjectives#new', :via => :get
 
   match '/testBS1' => 'monsters#test', :via => :get
 
