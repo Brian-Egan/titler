@@ -22,6 +22,10 @@ class MonstersController < ApplicationController
         @pageN = 1
       end
 
+    if @pageN < 1
+        @pageN = 1
+      end
+
           
 
     @monsters = Monster.page(params[:page]).order("likes_count DESC")
