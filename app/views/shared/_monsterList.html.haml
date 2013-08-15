@@ -1,14 +1,13 @@
 %ul.list-group.monsterList
 	- @monsters.each do |m|
-		%li.list-group-item
+		%li.list-group-item{id: "monLi#{m.id}"}
 			= m.name
-			-# = link_to m.like, like_monster_path(m), class: "btn btn-small pull-right" do
-			= link_to likeMon_monster_path(:id => m), class: "btn btn-small pull-right likeBtn" do 
-				%i.icon-thumbs-up-alt.pull-right
+			= link_to likeMon_monster_path(:id => m), id: "monSter#{m.id}",class: "btn btn-small pull-right likeBtn", remote: true do 
+				%i.icon-thumbs-up-alt.pull-right{id: "monStarI#{m.id}"}
 				- if m.likes_count == 1
-					= "#{m.likes_count} Like"
+					%p{id: "monP#{m.id}"} #{m.likes_count} Like
 				- else
-					= "#{m.likes_count} Likes"
+					%p{id: "monP#{m.id}"} #{m.likes_count} Likes
 				
 				-# = link_to m.like, like_monster_path(m), class: "btn btn-small pull-right" do
 			-# %span.badge

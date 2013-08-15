@@ -1,10 +1,12 @@
 %h1 Our Creations #{@sortOrder}
-= @sortOrder
+
 %div.btn-group.btn-group-sm.sortBtns
 	%button{:type => 'button', :class => 'btn btn-default sortDate'}
 		Sort by Date
 	%button{:type => 'button', :class => 'btn btn-default sortLikes'}
 		Sort by Popularity
+%span.badge.pull-right
+	= @monsters.count
 
 = render partial: 'shared/monsterList'
 			

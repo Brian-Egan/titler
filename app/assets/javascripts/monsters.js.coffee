@@ -22,3 +22,29 @@ $(document).delegate ".sortLikes", "click", ->
 	$.get('/monsters', sStyle, null, "script")
 	return false
 
+# $(document).delegate ".likeBtn", "click", ->
+# 	aID = this.id;
+# 	mID = aID.substr(aID.length - 1);
+# 	idObj = {id: mID}
+# 	# console.log(mID);
+# 	# console.log("got id?");
+# 	mPath = "/monsters/" + mID + "/likeMon"
+# 	console.log(mPath);
+# 	$.get(mPath, idObj, null, "script");
+# 	return false;
+
+
+$('.likeBtn').click ->
+	aID = this.id;
+	mID = aID.substr(aID.length - 1);
+	idObj = {id: mID}
+	# console.log(mID);
+	# console.log("got id?");
+	mPath = "/monsters/" + mID + "/likeMon"
+	console.log(mPath);
+	$.get(mPath, idObj, null, "script");
+	return false;
+
+
+
+

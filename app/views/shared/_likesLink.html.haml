@@ -1,0 +1,6 @@
+= link_to likeMon_monster_path(:id => m), id: "monSter#{m.id}",class: "btn btn-small pull-right likeBtn", remote: true do 
+	%i.icon-thumbs-up-alt.pull-right{id: "monStarI#{m.id}"}
+	- if m.likes_count == 1
+		%p{id: "monP#{m.id}"} #{m.likes_count} Like
+	- else
+		= "#{m.likes_count} Likes"

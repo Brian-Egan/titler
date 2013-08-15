@@ -115,3 +115,8 @@ hr {
 .sortBtns {
 	margin: auto auto 5px auto;
 }
+
+i {
+	margin-right: -5px !important;
+	margin-top: 16% !important;
+}

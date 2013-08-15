@@ -121,8 +121,11 @@ class MonstersController < ApplicationController
     @monster.likes_count += 1
     @monster.save
     @sortOrder = "sortLikes"
+    @likes = Monster.find(@monster_id).likes_count
 
-    redirect_to monsters_path
+    respond_to do |format|
+      format.js
+    end
   end
 
 

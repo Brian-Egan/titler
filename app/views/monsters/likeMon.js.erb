@@ -1,0 +1,8 @@
+console.log("here at the wall");
+var aID = "#monP" + <%= j @monster_id %>;
+console.log(aID);
+console.log("<%= j @monster.name %>");
+$(aID).text("<%= j @likes.to_s %>" + " Likes").fadeIn('fast');
+
+// $(aID).text("hello!").fadeIn('fast');
+
