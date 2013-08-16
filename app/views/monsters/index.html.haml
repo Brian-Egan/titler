@@ -14,53 +14,25 @@
 
 
 
--# %ul.pagination.pull-right.pageNums
--# 	%li
--# 		-# %a{:href => "#"} &laquo;
--# 		= link_to "<<", monsters_path(:page => (@pageN - 2))
--# 	%li
--# 		-# %a{:href => "#"} 1
--# 		= link_to "#{@pageN -1}", monsters_path(:page => (@pageN - 1))
--# 	%li
--# 		-# %a{:href => "#"} 2
--# 		= link_to "#{@pageN}", monsters_path(:page => @pageN)
--# 	%li
--# 		-# %a{:href => "#"} 3
--# 		= link_to "#{@pageN + 1}", monsters_path(:page => (@pageN + 1))
--# 	%li
--# 		-# %a{:href => "#"} 4
--# 		= link_to "#{@pageN + 2}", monsters_path(:page => (@pageN + 2))
--# 	%li
--# 		-# %a{:href => "#"} 5
--# 		= link_to "#{@pageN + 3}", monsters_path(:page => (@pageN + 3))
--# 	%li
--# 		-# %a{:href => "#"} ">>""
--# 		= link_to ">>", monsters_path(:page => @pageN)
-
 %ul.pagination.pull-right.pageNums
 	%li
-		%a{:href => "#"} &laquo;
-		-# = link_to "<<", monsters_path(:page => (@pageN - 2))
+		-# %a{:href => "#"} &laquo;
+		= link_to "<<", monsters_path(:page => (@pageN - 2))
 	%li
-		%a{:href => "#"} 1
-		-# = link_to "#{@pageN -1}", monsters_path(:page => (@pageN - 1))
+		-# %a{:href => "#"} 1
+		= link_to "#{@pageN -1}", monsters_path(:page => (@pageN - 1))
 	%li
-		%a{:href => "#"} 2
-		-# = link_to "#{@pageN}", monsters_path(:page => @pageN)
+		-# %a{:href => "#"} 2
+		= link_to "#{@pageN}", monsters_path(:page => @pageN)
 	%li
-		%a{:href => "#"} 3
-		-# = link_to "#{@pageN + 1}", monsters_path(:page => (@pageN + 1))
+		-# %a{:href => "#"} 3
+		= link_to "#{@pageN + 1}", monsters_path(:page => (@pageN + 1))
 	%li
-		%a{:href => "#"} 4
-		-# = link_to "#{@pageN + 2}", monsters_path(:page => (@pageN + 2))
+		= link_to "#{@pageN + 2}", monsters_path(:page => (@pageN + 2))
 	%li
-		%a{:href => "#"} 5
-		-# = link_to "#{@pageN + 3}", monsters_path(:page => (@pageN + 3))
+		= link_to "#{@pageN + 3}", monsters_path(:page => (@pageN + 3))
 	%li
-		%a{:href => "#"} ">>""
-		-# = link_to ">>", monsters_path(:page => @pageN)
-
-
+		= link_to ">>", monsters_path(:page => @pageN)
 
 %hr
 
