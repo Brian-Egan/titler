@@ -80,5 +80,14 @@ Titler::Application.configure do
 
   # replace this with your tracker code
   GA.tracker = "UA-43182175-1"
+
+
+  #Incorporate FontAwesome & Glyphicons (and anything else in assets/fonts directory into assets pipeline
+    # Add the fonts path
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+    # Precompile additional assets
+    config.assets.precompile += %w( .svg .eot .woff .ttf )
+
   
 end
