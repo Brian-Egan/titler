@@ -1,5 +1,7 @@
 Titler::Application.routes.draw do
 
+  resources :old_monsters
+
   resources :adjectives
 
   resources :nouns
