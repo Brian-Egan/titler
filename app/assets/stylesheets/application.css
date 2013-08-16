@@ -174,3 +174,11 @@ i.icon-thumbs-up-alt {
 .btn-text-success {
 	color: #81b15c !important;
 }
+
+span btn {
+	color: white !important;
+}
+
+span a {
+	color: white !important;
+}
