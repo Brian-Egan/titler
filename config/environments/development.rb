@@ -31,4 +31,11 @@ Titler::Application.configure do
 
   # Automatically inject JavaScript needed for LiveReload
   config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
+
+  #Incorporate FontAwesome & Glyphicons (and anything else in assets/fonts directory into assets pipeline
+    # Add the fonts path
+    config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+    # Precompile additional assets
+    config.assets.precompile += %w( .svg .eot .woff .ttf )
 end
