@@ -1,14 +1,33 @@
-%h1 Our Creations #{@sortOrder}
+.row
+	%h1.monHeader Our Creations #{@sortOrder}
+	%span.monBadge.badge.badge-danger
+		= @monsters.count
 
-
-%div.btn-group.btn-group-sm.sortBtns
-	%button{:type => 'button', :class => 'btn btn-default sortDate'}
-		Sort by Date
-	%button{:type => 'button', :class => 'btn btn-default sortLikes'}
-		Sort by Popularity
-%span.badge.monBadge
-	= @monsters.count
-
+%div.row
+	%div.btn-group.btn-group-sm.sortBtns.col-7
+		%button{:type => 'button', :class => 'btn btn-default sortDate'}
+			Sort by Date
+		%button{:type => 'button', :class => 'btn btn-default sortLikes'}
+			Sort by Popularity
+	%ul.pagination.pageNums.pull-right
+		%li
+			-# %a{:href => "#"} &laquo;
+			= link_to "<<", monsters_path(:page => (@pageN - 2)), class: "mPageNum"
+		%li
+			-# %a{:href => "#"} 1
+			= link_to "#{@pageN -1}", monsters_path(:page => (@pageN - 1)), class: "mPageNum"
+		%li.active
+			-# %a{:href => "#"} 2
+			= link_to "#{@pageN}", monsters_path(:page => @pageN), class: "mPageNum"
+		%li
+			-# %a{:href => "#"} 3
+			= link_to "#{@pageN + 1}", monsters_path(:page => (@pageN + 1)), class: "mPageNum"
+		%li
+			= link_to "#{@pageN + 2}", monsters_path(:page => (@pageN + 2)), class: "mPageNum"
+		%li
+			= link_to "#{@pageN + 3}", monsters_path(:page => (@pageN + 3)), class: "mPageNum"
+		%li
+			= link_to ">>", monsters_path(:page => @pageN), class: "mPageNum"
 
 
 -# %div{class: "text-primary pull-left"}
@@ -16,25 +35,7 @@
 
 
 
-%ul.pagination.pull-right.pageNums
-	%li
-		-# %a{:href => "#"} &laquo;
-		= link_to "<<", monsters_path(:page => (@pageN - 2))
-	%li
-		-# %a{:href => "#"} 1
-		= link_to "#{@pageN -1}", monsters_path(:page => (@pageN - 1))
-	%li
-		-# %a{:href => "#"} 2
-		= link_to "#{@pageN}", monsters_path(:page => @pageN)
-	%li
-		-# %a{:href => "#"} 3
-		= link_to "#{@pageN + 1}", monsters_path(:page => (@pageN + 1))
-	%li
-		= link_to "#{@pageN + 2}", monsters_path(:page => (@pageN + 2))
-	%li
-		= link_to "#{@pageN + 3}", monsters_path(:page => (@pageN + 3))
-	%li
-		= link_to ">>", monsters_path(:page => @pageN)
+
 
 %hr
 
