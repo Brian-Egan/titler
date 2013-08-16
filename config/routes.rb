@@ -6,6 +6,7 @@ Titler::Application.routes.draw do
 
   resources :monsters do
     get 'likeMon', :on => :member
+    get 'save', :on => :member
   end
 
 

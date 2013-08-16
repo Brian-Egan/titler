@@ -59,11 +59,11 @@ body {
 }
 
 .refreshMonster {
-	min-width: 75%;
+/*	min-width: 45% !important;*/
 /*	margin-left: 12.5% !important;
 	margin-right: 12.5% !important;*/
-	margin-left: 25% !important;
-	margin-bottom: 15px !important;
+	/*margin-left: 25% !important;
+	margin-bottom: 15px !important;*/
 }
 
 
@@ -161,5 +161,10 @@ i.icon-thumbs-up-alt {
 
 .badge-danger {
 	background-color: #c8607e !important;
+}
+
+.saveMonster {
+	margin-bottom: 5px !important;
+	/*margin-left: 4% !important;*/
 }
 

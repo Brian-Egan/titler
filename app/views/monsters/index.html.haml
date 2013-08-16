@@ -3,6 +3,7 @@
 	%span.monBadge.badge.badge-danger
 		= @monsters.count
 
+
 %div.row
 	%ul.pager.pull-left.pageNums
 		%li
@@ -20,6 +21,7 @@
 			Sort by Date
 		%button{:type => 'button', :class => 'btn btn-default sortLikes'}
 			Sort by Popularity
+		= link_to 'Create Monster', random_path, class: "btn btn-primary", type: "button"
 	
 
 %hr

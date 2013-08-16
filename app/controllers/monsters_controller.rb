@@ -145,6 +145,19 @@ class MonstersController < ApplicationController
     end
   end
 
+  def save
+    @monster_id = params[:id]
+    @monster = Monster.find(@monster_id)
+    @monster.likes_count += 1
+    @monster.save
+    @sortOrder = "sortLikes"
+    @likes = Monster.find(@monster_id).likes_count
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
 
 
   private

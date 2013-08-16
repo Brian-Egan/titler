@@ -4,17 +4,9 @@
 		%h1#myAdj= @adjective
 		%h2#myNoun= @noun
 
+%div.row
+	%div
+		%button{:type => 'button', :class => 'saveMonster btn btn-large btn-default col-lg-6'} Save
+	.col-offset-6
+		%button{:type => 'button', :class => 'refreshMonster btn btn-large btn-default col-lg-12'} Refresh
 
-
-	-# %h2= @mymonster
-
-
-
-
-	-# %h3 There are
-	-# =@num_adj
-	-# adjectives and
-	-# =@num_noun
-	-# nouns in the database!
-
-= button_to "Refresh", random_path, :method => :get, :class => 'refreshMonster btn btn-large btn-default', :remote => "true"
