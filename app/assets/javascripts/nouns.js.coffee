@@ -25,5 +25,20 @@ submitNounForm = (form) ->
 	$.post $("#new_noun").attr("action"), wordForm, null, "script"
 	return false
 
-$('.nounDelete').click ->
+# $(document).delegate ".nounDelete", "click", ->
+# 	nID = $(this).attr('id')
+# 	console.log(nID)
+# 	# IDn = nID.substr(nID.length-2)
+# 	# IDn = nID.split("_").pop();
+# 	# console.log("which means it is noun #" + IDn)
+# 	# param = {id: IDn}
+# 	# console.log(param)
+# 	# myPath = '/nouns/' + IDn
+# 	# $.post $(myPath, IDn, null, "script")
+# 	return false
+
+
+# $(".nounDelete").bind "ajax:success", ->
+#   alert("hubba hubba")
+
 	

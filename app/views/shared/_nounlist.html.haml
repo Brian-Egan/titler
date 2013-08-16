@@ -2,4 +2,5 @@
 	- @nouns.each do |n|
 		%li.list-group-item
 			= n.word
+			-# %button{type: "button", class: "btn btn-small btn-link nounDelete pull-right", id: "noun_#{n.id}" } x
 			= link_to 'x', noun_path(n), method: :delete, class: "pull-right nounDelete", data: { confirm: 'Are you sure?' } 

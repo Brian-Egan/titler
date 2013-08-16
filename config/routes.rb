@@ -9,6 +9,8 @@ Titler::Application.routes.draw do
     # post 'save', :on => :member
   end
 
+  match '/dNoun' => 'nouns#destroy', :via => :delete
+
 
   # resources :descriptions
 
