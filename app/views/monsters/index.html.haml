@@ -6,8 +6,12 @@
 
 %div.row
 	%ul.pager.pull-left.pageNums
-		%li
-			= link_to "Previous", monsters_path(:page => @pageN - 2)
+		- if @pageN < 3
+			%li.disabled
+				= link_to "Previous", "#"
+		- else
+			%li
+				= link_to "Previous", monsters_path(:page => @pageN - 2)
 		%li
 			= page_entries_info
 		- if @pageN > @totPgs
