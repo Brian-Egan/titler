@@ -101,21 +101,18 @@ hr {
 	margin-top: -11px !important;
 	width: 75px !important;
 	vertical-align: middle !important;
-	overflow; hidden;
+	overflow: hidden;
 	padding-bottom: 0px;
-
 }
 
 .likeBtn i {
 	margin-top: 11%;
-
 }
 
 
 .likeBtn:hover {
 	background: #4687da;
 	height: 42px;
-
 }
 
 .sortBtns {
