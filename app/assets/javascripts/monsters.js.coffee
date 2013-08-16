@@ -5,6 +5,8 @@
 
 $(document).delegate ".refreshMonster", "click", ->
   $.get('/random', "allData", null, "script")
+  $('.saveMonster').text('Save')
+  $('.saveMonster').removeClass('btn-text-success')
   return false
 
 $(document).delegate ".saveMonster", "click", ->
