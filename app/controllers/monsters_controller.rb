@@ -85,12 +85,28 @@ class MonstersController < ApplicationController
     @randN = @randN + 1 unless @randN > 0
     @noun = Noun.find(@randN).word
 
-    @mymonster = @adjective + " " + @noun
+    # @mymonster = @adjective + " " + @noun
 
-    @monster = Monster.new(:name => @mymonster, :noun => @noun, :adjective => @adjective)
-    @monster.save
+    # @monster = Monster.new(:name => @mymonster, :noun => @noun, :adjective => @adjective)
+    # @monster.save
  
   end
+
+  # def save
+
+    
+
+  #   @monster_id = params[:id]
+  #   @monster = Monster.find(@monster_id)
+  #   @monster.likes_count += 1
+  #   @monster.save
+  #   @sortOrder = "sortLikes"
+  #   @likes = Monster.find(@monster_id).likes_count
+
+  #   respond_to do |format|
+  #     format.js
+  #   end
+  # end
 
 
   # PATCH/PUT /monsters/1
@@ -145,18 +161,7 @@ class MonstersController < ApplicationController
     end
   end
 
-  def save
-    @monster_id = params[:id]
-    @monster = Monster.find(@monster_id)
-    @monster.likes_count += 1
-    @monster.save
-    @sortOrder = "sortLikes"
-    @likes = Monster.find(@monster_id).likes_count
 
-    respond_to do |format|
-      format.js
-    end
-  end
 
 
 
