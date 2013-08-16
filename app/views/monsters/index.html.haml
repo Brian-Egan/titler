@@ -4,38 +4,23 @@
 		= @monsters.count
 
 %div.row
-	%div.btn-group.btn-group-sm.sortBtns.col-7
+	%ul.pager.pull-left.pageNums
+		%li
+			= link_to "Previous", monsters_path(:page => @pageN - 2)
+		%li
+			= page_entries_info
+		- if @pageN > @totPgs
+			%li.disabled
+				= link_to "Next", "#"
+		- else
+			%li
+				= link_to "Next", monsters_path(:page => @pageN)
+	%div.btn-group.btn-group-sm.sortBtns.pull-right
 		%button{:type => 'button', :class => 'btn btn-default sortDate'}
 			Sort by Date
 		%button{:type => 'button', :class => 'btn btn-default sortLikes'}
 			Sort by Popularity
-	%ul.pagination.pageNums.pull-right
-		%li
-			-# %a{:href => "#"} &laquo;
-			= link_to "<<", monsters_path(:page => (@pageN - 2)), class: "mPageNum"
-		%li
-			-# %a{:href => "#"} 1
-			= link_to "#{@pageN -1}", monsters_path(:page => (@pageN - 1)), class: "mPageNum"
-		%li.active
-			-# %a{:href => "#"} 2
-			= link_to "#{@pageN}", monsters_path(:page => @pageN), class: "mPageNum"
-		%li
-			-# %a{:href => "#"} 3
-			= link_to "#{@pageN + 1}", monsters_path(:page => (@pageN + 1)), class: "mPageNum"
-		%li
-			= link_to "#{@pageN + 2}", monsters_path(:page => (@pageN + 2)), class: "mPageNum"
-		%li
-			= link_to "#{@pageN + 3}", monsters_path(:page => (@pageN + 3)), class: "mPageNum"
-		%li
-			= link_to ">>", monsters_path(:page => @pageN), class: "mPageNum"
-
-
--# %div{class: "text-primary pull-left"}
--# 	= "Page #{@pageN}"
-
-
-
-
+	
 
 %hr
 

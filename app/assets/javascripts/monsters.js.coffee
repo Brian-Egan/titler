@@ -51,12 +51,15 @@ $('.likeBtn').click ->
 	# return false
 
 
-$(document).delegate ".mPageNum", "click", ->
-	console.log("delegate worked!");
-	theLi = $(this).parent();
-	console.log($(this).parent());
-	console.log(theLi);
-	console.log($(this).parent().hasClass('active'));
+# $(document).delegate ".mPageNum", "click", ->
+# 	console.log("delegate worked!");
+# 	theLi = $(this).parent();
+# 	theUl = theLi.parent();
+# 	console.log(theLi);
+# 	console.log(theUl.children());
+# 	$.each theUl.children(), ->
+# 	  $(this).removeClass "active"  if $(this).hasClass("active")
+# 	console.log(theLi.hasClass('active'));
 	# myLi = $(this).parent();
 	# myLi.addClass("active");
 	# $(this).parent().addClass('active');

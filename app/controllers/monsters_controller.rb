@@ -22,9 +22,9 @@ class MonstersController < ApplicationController
         @pageN = 1
       end
 
-    if @pageN < 1
-        @pageN = 1
-      end
+    @perPage = Monster.per_page.ceil
+
+    @totPgs = (Monster.count.to_f / Monster.per_page.to_f)
 
           
 

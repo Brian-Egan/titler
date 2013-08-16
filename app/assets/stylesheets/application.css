@@ -81,7 +81,7 @@ body {
 }
 
 hr {
-	margin-top: 8px !important;
+	margin-top: 4px !important;
 	margin-bottom: 8px !important;
 }
 
@@ -113,7 +113,7 @@ hr {
 }
 
 .sortBtns {
-	margin: auto auto 5px auto;
+	margin: 4px auto 5px auto;
 }
 
 i.icon-thumbs-up-alt {
@@ -127,8 +127,8 @@ i.icon-thumbs-up-alt {
 }
 
 .pageNums {
-	margin-top: 0px !important;
-	margin-bottom: 0px !important;
+	margin-top: 4px !important;
+	margin-bottom: 2px !important;
 }
 
 
