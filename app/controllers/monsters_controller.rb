@@ -85,6 +85,12 @@ class MonstersController < ApplicationController
     @randN = @randN + 1 unless @randN > 0
     @noun = Noun.find(@randN).word
 
+    @TotMon = TotalMonsters.find(1)
+    @TotMon.monster_count += 1
+    @TotMon.save
+
+
+
     # @mymonster = @adjective + " " + @noun
 
     # @monster = Monster.new(:name => @mymonster, :noun => @noun, :adjective => @adjective)
