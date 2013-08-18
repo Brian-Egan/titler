@@ -32,4 +32,4 @@ en:
         one:   "Displaying <b>1</b> %{model}"
         other: "Displaying <b>all&nbsp;%{count}</b> %{model}"
       multi_page: "Displaying %{model} %{from} - %{to} of %{count} in total"
-      multi_page_html: "%{model}s <b>%{from}&nbsp;-&nbsp;%{to}</b> of <b>%{count}</b>"
+      multi_page_html: "%{model}s <b>%{from}&nbsp;-&nbsp;%{to}</b>"
