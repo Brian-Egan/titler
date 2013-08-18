@@ -78,5 +78,7 @@ Titler::Application.routes.draw do
 
   match '/testBS1' => 'monsters#test', :via => :get
 
+  match '/stats' => 'monsters#stats', :via => :get
+
 
 end

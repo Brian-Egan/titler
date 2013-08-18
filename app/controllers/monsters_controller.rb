@@ -98,6 +98,14 @@ class MonstersController < ApplicationController
  
   end
 
+  def stats
+    @monsters = Monster.all
+    @TotMon = TotalMonsters.find(1).monster_count
+    @numAdj = Adjective.count
+    @numNoun = Noun.count
+
+  end
+
   # def save
 
     
