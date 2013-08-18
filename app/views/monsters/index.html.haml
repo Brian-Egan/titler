@@ -1,3 +1,8 @@
+-# .row 
+-# 	= params.inspect
+-# 	Page Number: #{@pageN}
+-# 	Total Pages: #{@totPgs}
+
 .row
 	%h1.monHeader Our Creations #{@sortOrder}
 	%span.monBadge.badge.badge-danger
@@ -14,7 +19,7 @@
 				= link_to "Previous", monsters_path(:page => @pageN - 2)
 		%li
 			= page_entries_info
-		- if @pageN > @totPgs
+		- if @pageN > @totPgs.ceil
 			%li.disabled
 				= link_to "Next", "#"
 		- else
