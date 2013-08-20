@@ -104,33 +104,6 @@ class MonstersController < ApplicationController
     @numAdj = Adjective.count
     @numNoun = Noun.count
 
-
-    @mNum = rand(@monsters.count)
-    @snapM = Monster.find(@mNum)
-    # @snapM.take_snapshot
-
-
-    # @file = Tempfile.new(["template_#{@mNum}", 'jpg'], 'tmp', :encoding => 'ascii-8bit')
-    # @file.write(IMGKit.new(@snapM.name, quality: 50, width: 600).to_jpg)
-    # @file.flush
-
-
-   #  @kit = IMGKit.new("hello").to_jpg
-
-   #  @file  = Tempfile.new(["template_#{@mNum}", 'png'], 'tmp',
-   #                       :encoding => 'ascii-8bit')
-   # @file.write(@kit)
-   # @file.flush
-
-
-    @kit = IMGKit.new(render_to_string)
-
-    respond_to do |format|
-      format.jpg do
-        send_data(@kit.to_jpg, :type => "image/jpeg", :disposition => 'inline')
-      end
-    end
-    
   end
 
   # def save
