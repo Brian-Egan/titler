@@ -104,6 +104,67 @@ class MonstersController < ApplicationController
     @numAdj = Adjective.count
     @numNoun = Noun.count
 
+    
+    # @kit = IMGKit.new("http://www.google.com")
+    # @filename = Time.now.to_s + '.jpg'
+
+
+    #@display = "<h1>OMG u broke teh intertubez!!111</h1>"
+   # @display = "#{render 'stats'}"
+
+
+    # @display = "'" + render_to_string(
+    #   :file => "monsters/stats",
+    #   :locals => { @TotMon => @TotMon, @monsters => @monsters}) + "'"
+
+
+    # @kit = IMGKit.new(@display)
+    # @img = @kit.to_img(:jpg)
+    # @file = @kit.to_file(Rails.root + "public/imgkit_images/" + @filename)
+
+
+# TO JPG
+    @display =  "<h1> Monster Stats IMAGE2! </h1><div class='jumbotron'><h3><b>Monsters created:</b> #{@TotMon }</h3>
+  <h3><b>Monsters saved:</b> #{ @monsters.count}</h3></div>"
+
+    
+    @filename = Time.now.to_s + '.jpg'
+    @kit = IMGKit.new(@display, height: 275, width: 500, quality: 100)
+    # @kit.stylesheets << "#{Rails.root}/assets/application.css"
+    @kit.stylesheets << "#{Rails.root}/app/assets/stylesheets/bootstrap.min.css"
+    @img = @kit.to_img(:jpg)
+    @file = @kit.to_file(Rails.root + "public/imgkit_images/" + @filename)
+    @loc = '../imgkit_images/' + @filename
+
+
+    respond_to do |format|
+     
+     format.html 
+     format.jpg do
+        @filename = Time.now.to_s + '.jpg'
+        @kit = IMGkit.new(self)
+        @img = @kit.to_img(:jpg)
+        @file = @kit.to_file(Rails.root + "public/imgkit_images/" + @filename)
+    end
+
+      #send_data(@kit.to_jpg, :type => "image/jpeg", :disposition => 'inline')
+
+
+       # format.png do
+       #    send_data(@kit.to_png, :type => "image/png", :disposition => 'inline')
+       #  end
+
+       # send_data(@kit.to_img(format.jpg),
+       #      :type => "image/png", :disposition => 'inline')
+
+    
+  end
+
+     # @filename = Time.now.to_s + '.jpg'
+     #  @kit = IMGKit.new("#{/stats}")
+     #  @img = @kit.to_img(:jpg)
+     #  @file = @kit.to_file(Rails.root + "public/imgkit_images/" + @filename)
+
   end
 
   # def save
