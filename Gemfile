@@ -65,6 +65,12 @@ gem 'less-rails-bootstrap', '~> 3.0.0.wip', github: 'sinfin/less-rails-bootstrap
 gem 'will_paginate-bootstrap'
 
 
+gem 'websnap'
+gem 'pdfkit'
+
+gem  'wkhtmltopdf-binary'
+
+
 
 # gem 'devise'
 
